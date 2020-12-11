@@ -44,5 +44,8 @@ $('#three').val(localStorage.getItem('3PM'))
 $('#four').val(localStorage.getItem('4PM'))
 $('#five').val(localStorage.getItem('5PM'))
 
-
+function actualTime(){
+    console.log(currentHour)
+}
+actualTime()
 
