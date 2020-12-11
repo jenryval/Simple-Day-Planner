@@ -1,5 +1,12 @@
-moment(Date);
-$("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a')); 
-var currentTime = moment();
-currentTime = currentTime.startOf("hour");
-var beforeTime = moment().startOf('day').add(9, "hours");
+var currentDay = moment().format('LL');
+var currentTime = moment().format('LT');
+var startDay = moment().startOf('hour');
+var currentHour = currentTime.split(':')[0]
+var allHours = ['9', '10', '11', '12', '1', '2', '3', '4', '5']
+console.log(currentHour)
+console.log('time', currentTime, typeof(currentTime))
+
+// display current date
+$("#currentDay").text(currentDay)
+// display current time
+$("#currentTime").text(currentTime)
