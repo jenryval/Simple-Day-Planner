@@ -44,8 +44,20 @@ $('#three').val(localStorage.getItem('3PM'))
 $('#four').val(localStorage.getItem('4PM'))
 $('#five').val(localStorage.getItem('5PM'))
 
-function actualTime(){
-    console.log(currentHour)
+function actualTime() {
+    for(i = 0; i < allHours.length; i++){
+        if(allHours[i]===currentHour){
+            //all hours [i]= current time
+            $("#"+ allHours[i]).addClass('present')
+        }
+        else if(futureHours.includes(allHours[i])){
+            // all hours [i] is in future array
+            $('#'+ allHours[i]).addClass('future')
+        }
+        else if(pastHours.includes(allHours[i])){
+            //all hours [i] in past array
+            $('#' + allHours[i]).addClass('past')
+        }
+    };
 }
-actualTime()
-
+actualTime();
